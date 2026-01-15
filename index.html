@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A premium, neon-styled Tetris simulator experience.">
+    <title>Neon Tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="game-header">
+            <h1>NEON TETRIS</h1>
+            <p class="subtitle">Ultimate Block Challenge</p>
+        </header>
+
+        <main class="game-layout">
+            <aside class="sidebar left-sidebar">
+                <div class="panel glass-panel">
+                    <h2>Hold</h2>
+                    <div id="hold-piece" class="piece-display"></div>
+                </div>
+                <div class="panel glass-panel score-panel">
+                    <h2>Score</h2>
+                    <div id="score">0</div>
+                    <h3>Level</h3>
+                    <div id="level">1</div>
+                    <h3>Lines</h3>
+                    <div id="lines">0</div>
+                </div>
+            </aside>
+
+            <div class="game-board-container glass-panel">
+                <canvas id="tetris-board" width="300" height="600"></canvas>
+                <div id="game-overlay" class="overlay active">
+                    <h2 id="overlay-title">Ready?</h2>
+                    <button id="start-btn" class="glow-button">Start Game</button>
+                </div>
+            </div>
+
+            <aside class="sidebar right-sidebar">
+                <div class="panel glass-panel">
+                    <h2>Next</h2>
+                    <div id="next-piece" class="piece-display"></div>
+                </div>
+                <div class="panel glass-panel controls-panel">
+                    <h2>Controls</h2>
+                    <ul class="controls-list">
+                        <li><span>← →</span> Move</li>
+                        <li><span>↑</span> Rotate</li>
+                        <li><span>↓</span> Soft Drop</li>
+                        <li><span>Space</span> Hard Drop</li>
+                        <li><span>C</span> Hold</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
